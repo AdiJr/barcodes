@@ -26,11 +26,9 @@ class GlobalProviders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: _buildRepositories(context),
-      child: Builder(
-        builder: (BuildContext context) => MultiBlocProvider(
-          providers: _buildBlocProviders(context),
-          child: const App(),
-        ),
+      child: MultiBlocProvider(
+        providers: _buildBlocProviders(context),
+        child: const App(),
       ),
     );
   }

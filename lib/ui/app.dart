@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/bloc/theme_cubit/theme_cubit.dart';
 import 'package:flutter_template/config/routes.dart';
 import 'package:flutter_template/config/theme.dart';
-import 'package:routemaster/routemaster.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -14,10 +13,7 @@ class App extends StatelessWidget {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (BuildContext context, ThemeState state) {
         return MaterialApp.router(
-          routerDelegate: RoutemasterDelegate(routesBuilder: (_) {
-            return Routes.defaultMap;
-          }),
-          routeInformationParser: const RoutemasterParser(),
+          routerConfig: Routes.router,
           title: 'Flutter Template',
           theme: AppThemes.lightTheme,
           themeMode: state.themeMode,

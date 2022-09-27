@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/ui/home/home_screen.dart';
-import 'package:routemaster/routemaster.dart';
+import 'package:go_router/go_router.dart';
 
 class Routes {
-  static const initialRoute = '/';
-
-  //TODO: define different maps for specific scenarios (loggedIn, loggedOut, etc.)
-  static final RouteMap defaultMap = RouteMap(
-    routes: {
-      HomeScreen.route: (route) => const MaterialPage<dynamic>(
-            child: HomeScreen(),
-          ),
-    },
-    onUnknownRoute: (_) => Redirect(HomeScreen.route),
+  static final GoRouter router = GoRouter(
+    initialLocation: HomeScreen.route,
+    routes: <GoRoute>[
+      GoRoute(
+        path: HomeScreen.route,
+        builder: (BuildContext context, GoRouterState state) => HomeScreen(),
+      ),
+    ],
   );
 }
