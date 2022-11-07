@@ -1,5 +1,5 @@
-name: flutter_template
-description: Template for Flutter apps
+name: barcodes
+description: Simple app to generate and scan barcodes
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -40,6 +40,10 @@ dependencies:
   very_good_analysis: ^3.1.0
   freezed_annotation: ^2.0.3
   json_annotation: ^4.6.0
+
+  # Barcodes
+  flutter_barcode_scanner: ^2.0.0
+  barcode_widget: ^2.0.3
 
 dev_dependencies:
   flutter_test:

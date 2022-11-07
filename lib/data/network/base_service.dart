@@ -1,5 +1,5 @@
+import 'package:barcodes/config/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_template/config/logger.dart';
 
 abstract class BaseService {
   BaseService(BaseOptions options) {
@@ -10,7 +10,7 @@ abstract class BaseService {
               RequestInterceptorHandler requestInterceptorHandler) async {
             Logger.d('--> ${options.method} ${options.uri}');
             for (final MapEntry<String, dynamic> header
-                in options.headers.entries) {
+            in options.headers.entries) {
               Logger.d('${header.key} : ${header.value}');
             }
             Logger.d('${options.data}');
@@ -22,7 +22,7 @@ abstract class BaseService {
             Logger.d(
                 '<-- ${response.statusCode} ${response.requestOptions.uri}');
             for (final MapEntry<String, dynamic> header
-                in response.headers.map.entries) {
+            in response.headers.map.entries) {
               Logger.d('${header.key} : ${header.value}');
             }
             Logger.d('${response.data}');

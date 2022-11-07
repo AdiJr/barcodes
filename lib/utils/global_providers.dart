@@ -1,11 +1,11 @@
+import 'package:barcodes/bloc/barcode_cubit/barcode_cubit.dart';
+import 'package:barcodes/data/network/rest_service.dart';
+import 'package:barcodes/data/repository/example_repository.dart';
+import 'package:barcodes/ui/app.dart';
+import 'package:barcodes/utils/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_template/bloc/theme_cubit/theme_cubit.dart';
-import 'package:flutter_template/data/network/rest_service.dart';
-import 'package:flutter_template/data/repository/example_repository.dart';
-import 'package:flutter_template/ui/app.dart';
-import 'package:flutter_template/utils/constants.dart';
 
 class GlobalProviders extends StatelessWidget {
   GlobalProviders({super.key}) {
@@ -41,6 +41,6 @@ class GlobalProviders extends StatelessWidget {
 
   List<BlocProvider<dynamic>> _buildBlocProviders(BuildContext context) =>
       <BlocProvider<dynamic>>[
-        BlocProvider<ThemeCubit>(create: (context) => ThemeCubit()),
+        BlocProvider<BarcodeCubit>(create: (context) => BarcodeCubit()),
       ];
 }

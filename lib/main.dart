@@ -1,6 +1,6 @@
+import 'package:barcodes/utils/global_providers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/utils/global_providers.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -13,7 +13,7 @@ void main() async {
   final storage = await HydratedStorage.build(storageDirectory: tmpDir);
 
   HydratedBlocOverrides.runZoned(
-    () => runApp(
+        () => runApp(
       EasyLocalization(
         path: 'assets/translations',
         supportedLocales: const [

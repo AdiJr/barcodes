@@ -1,4 +1,4 @@
-import 'package:flutter_template/data/network/rest_service.dart';
+import 'package:barcodes/data/network/rest_service.dart';
 
 class ExampleRepository {
   ExampleRepository(this._restService);

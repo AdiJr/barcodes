@@ -1,5 +1,5 @@
-import 'package:flutter_template/data/network/base_service.dart';
-import 'package:flutter_template/data/network/rest_client.dart';
+import 'package:barcodes/data/network/base_service.dart';
+import 'package:barcodes/data/network/rest_client.dart';
 
 class RestService extends BaseService {
   RestService(
